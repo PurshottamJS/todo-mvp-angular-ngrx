@@ -1,0 +1,14 @@
+<li
+  *ngIf="todo as todo"
+  [class.completed]="todo.completed"
+  [class.editing]="editing"
+>
+  <section class="example-section view">
+    <mat-checkbox [checked]="todo.completed" (click)="toggle.emit(todo.id)">
+        {{ todo.text }}
+    </mat-checkbox>
+    <mat-icon class="delete" (click)="delete.emit(todo.id)" matListIcon
+      >delete</mat-icon
+    >
+  </section>
+</li>

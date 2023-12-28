@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+.full-width {
+  width: 100%;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+.todoapp {
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 36px;
+}
+
+.main-div {
+  width: 500px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+.example-section > mat-checkbox {
+  flex: 1;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
+
+.footer {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}

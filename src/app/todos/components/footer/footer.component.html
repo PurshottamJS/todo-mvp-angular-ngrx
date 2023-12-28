@@ -1,0 +1,15 @@
+<footer class="footer">
+  <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="SHOW_ALL" (click)="filter.emit('SHOW_ALL')"
+      >All</mat-button-toggle
+    >
+    <mat-button-toggle value="SHOW_ACTIVE" (click)="filter.emit('SHOW_ACTIVE')"
+      >Active</mat-button-toggle
+    >
+    <mat-button-toggle
+      value="SHOW_COMPLETED"
+      (click)="filter.emit('SHOW_COMPLETED')"
+      >Completed</mat-button-toggle
+    >
+  </mat-button-toggle-group>
+</footer>

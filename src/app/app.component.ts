@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
+  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+      <router-outlet></router-outlet>
+  `,
 })
-export class AppComponent {
-  title = 'todo-mvp-angular-ngrx';
-}
+export class AppComponent {}

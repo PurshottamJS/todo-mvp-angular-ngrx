@@ -1,0 +1,11 @@
+<mat-form-field class="full-width">
+  <mat-label>Add new todo</mat-label>
+  <input
+    id="new-todo"
+    autofocus
+    matInput
+    placeholder="Ex. What's in your mind?"
+    #textInput
+    (keydown.enter)="newTodo(textInput.value); textInput.value = ''"
+  />
+</mat-form-field>

@@ -1,0 +1,33 @@
+<mat-toolbar>TODO MVP usng Angular(17), Material UI(17), NGRX(17)</mat-toolbar>
+<div class="todoapp">
+  <div class="main-div">
+    <app-new-todo
+      *ngIf="(loading$ | async) === false; else loading"
+      (addTodo)="onAddTodo($event)"
+    ></app-new-todo>
+    <mat-card class="example-card">
+      <mat-card-content>
+        <app-todo-list
+          *ngIf="hasTodos$ | async"
+          [todos]="filteredTodos$ | async"
+          (toggle)="onToggle($event)"
+          (update)="onUpdate($event)"
+          (delete)="onDelete($event)"
+        ></app-todo-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <app-footer
+    *ngIf="hasTodos$ | async"
+    [hasCompletedTodos]="hasCompletedTodos$ | async"
+    [undoneTodosCount]="undoneTodosCount$ | async"
+    [currentFilter]="currentFilter$ | async"
+    (filter)="onFilter($event)"
+    (clearCompleted)="onClearCompleted()"
+  ></app-footer>
+
+  <ng-template #loading>
+    <div>loading...</div>
+  </ng-template>
+</div>
